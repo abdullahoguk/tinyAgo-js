@@ -16,7 +16,7 @@ ago(new Date("2021-10-26"))
 
 ## Hızlı Kullanım için minify edilmiş hali
 ```js
-function ago(a){a=0|(Date.now()-a)/1e3;var n,e,o={saniye:60,dakika:60,saat:24,"gün":7,hafta:4.35,month:12,year:1e4};for(n in o)if(e=a%o[n],!(a=0|a/o[n]))return e<0?-1*e+" "+n+" sonra":e+" "+n+" önce"}
+function ago(a){a=0|(Date.now()-a)/1e3;var n,e,o={saniye:60,dakika:60,saat:24,"gün":7,hafta:4.35,ay:12,"yıl":1e4};for(n in o)if(e=a%o[n],!(a=0|a/o[n]))return e<0?-1*e+" "+n+" sonra":e+" "+n+" önce"}
 ```
 
 
