@@ -1,8 +1,34 @@
-TinyAgo.js
-==========
+# TinyAgo.js (Türkçe)
 
+ 
+Zamanı, göreceli zamana (`5 dakika önce` gibi) dönüştüren mini JavaScript kütüphanesi TinyAgo.js'in Türkçeleştirimiş halidir.
+Orijinal kütüphaneye ek olarak geçmiş ve gelecek zamanlar için `... önce` ve `... sonra` da fonksiyona dahil edilmiştir.
+
+## Kullanımı
+
+```js 
+ago(new Date("2021-09-26"))
+/* 3 gün önce */
+
+ago(new Date("2021-10-26"))
+/* 3 hafta sonra */
+```
+
+## Hızlı Kullanım için minify edilmiş hali
+```js
+function ago(a){a=0|(Date.now()-a)/1e3;var n,e,o={saniye:60,dakika:60,saat:24,"gün":7,hafta:4.35,month:12,year:1e4};for(n in o)if(e=a%o[n],!(a=0|a/o[n]))return e<0?-1*e+" "+n+" sonra":e+" "+n+" önce"}
+```
+
+
+
+
+
+---
+
+# ORIGINAL README
+ 
 TinyAgo.js is a tiny (180 bytes when minified) JavaScript library that converts
-timestamps into relative time (a.k.a. "time ago").
+timestamps into relative time (a.k.a. "time ago"). 
 
 Usage
 -----

@@ -1,11 +1,11 @@
 function ago(val) {
     val = 0 | (Date.now() - val) / 1000;
-    var unit, length = { second: 60, minute: 60, hour: 24, day: 7, week: 4.35,
-        month: 12, year: 10000 }, result;
+    var unit, length = { "saniye": 60, "dakika": 60, "saat": 24, "gün": 7, "hafta": 4.35,
+        "ay": 12, "yıl": 10000 }, result;
  
     for (unit in length) {
         result = val % length[unit];
         if (!(val = 0 | val / length[unit]))
-            return result + ' ' + (result-1 ? unit + 's' : unit);
+            return result < 0 ? result*(-1) + ' ' + unit + ' sonra' : result + ' ' + unit + ' önce';
     }
 }
